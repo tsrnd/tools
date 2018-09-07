@@ -1,0 +1,24 @@
+{
+  "name": "@tsrnd/github",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "author": "dao.nguyen@asiantech.vn",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/rest": "^15.11.1",
+    "commander": "^2.17.1",
+    "file-system": "^2.2.2",
+    "shelljs": "^0.8.2"
+  },
+  "scripts": {
+    "prebuild": "rm -rf ./dist",
+    "build": "tsc -b",
+    "prerepo": "npm run build",
+    "repo": "node ./dist/repo.js"
+  },
+  "devDependencies": {
+    "@types/node": "^10.9.4",
+    "typescript": "^3.0.3"
+  }
+}
